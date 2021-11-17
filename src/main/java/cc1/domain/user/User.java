@@ -1,16 +1,16 @@
-package cc1.domain;
+package cc1.domain.user;
 
 import java.util.Objects;
 
 public final class User {
-    private final UserId userId;
+    private final UserId id;
     private final EmailAddress emailAddress;
     private final String lastname;
     private final String firstname;
     private String password;
 
-    public User(UserId userId, EmailAddress emailAddress, String lastname, String firstname, String password) {
-        this.userId = Objects.requireNonNull(userId);
+    public User(UserId id, EmailAddress emailAddress, String lastname, String firstname, String password) {
+        this.id = Objects.requireNonNull(id);
         this.emailAddress = Objects.requireNonNull(emailAddress);
         this.lastname = Objects.requireNonNull(lastname);
         this.firstname = Objects.requireNonNull(firstname);
@@ -21,8 +21,8 @@ public final class User {
         return new User(userId, emailAddress, lastname, firstname, password);
     }
 
-    public UserId getUserId() {
-        return userId;
+    public UserId getId() {
+        return this.id;
     }
 
     public void changePassword(String newPassword) {
@@ -32,7 +32,7 @@ public final class User {
     @Override
     public String toString() {
         return "User{" +
-                "userId=" + userId +
+                "userId=" + id +
                 ", lastname='" + lastname + '\'' +
                 ", firstname='" + firstname + '\'' +
                 ", password='" + password + '\'' +

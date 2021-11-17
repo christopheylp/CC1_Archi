@@ -1,4 +1,4 @@
-package cc1.domain;
+package cc1.domain.user;
 
 public final class UserId {
 

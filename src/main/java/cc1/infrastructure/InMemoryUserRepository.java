@@ -1,8 +1,8 @@
-package cc1.infra;
+package cc1.infrastructure;
 
-import cc1.domain.User;
-import cc1.domain.UserId;
-import cc1.domain.UserRepository;
+import cc1.domain.user.User;
+import cc1.domain.user.UserId;
+import cc1.domain.user.UserRepository;
 
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ public final class InMemoryUserRepository implements UserRepository {
 
     @Override
     public void save(User user) {
-        data.put(user.getUserId(), user);
+        data.put(user.getId(), user);
     }
 
     @Override
@@ -34,8 +34,8 @@ public final class InMemoryUserRepository implements UserRepository {
     }
 
     @Override
-    public List<User> findAll() {
-        return (List<User>) data;
+    public Map<UserId, User> findAll() {
+        return data;
     }
 
 }

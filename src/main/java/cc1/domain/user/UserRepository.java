@@ -1,6 +1,7 @@
-package cc1.domain;
+package cc1.domain.user;
 
 import java.util.List;
+import java.util.Map;
 
 public interface UserRepository {
     void save(User user);
@@ -9,5 +10,5 @@ public interface UserRepository {
 
     UserId nextIdentity();
 
-    List<User> findAll();
+    Map<UserId, User> findAll();
 }
