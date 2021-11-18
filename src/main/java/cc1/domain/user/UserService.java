@@ -1,6 +1,5 @@
 package cc1.domain.user;
 
-import java.util.List;
 import java.util.Map;
 
 public final class UserService {
@@ -24,4 +23,14 @@ public final class UserService {
     public Map<UserId, User> all() {
         return this.userRepository.findAll();
     }
+
+    public User byId(UserId userId) {
+        return this.userRepository.byId(userId);
+    }
+
+    public UserId byEmailAndPassword(EmailAddress email, String password) {
+        return this.userRepository.byEmailAndPassword(email, password);
+    }
+
+
 }

@@ -1,5 +1,6 @@
 package cc1.infrastructure;
 
+import cc1.domain.user.EmailAddress;
 import cc1.domain.user.User;
 import cc1.domain.user.UserId;
 import cc1.domain.user.UserRepository;
@@ -26,6 +27,16 @@ public final class InMemoryUserRepository implements UserRepository {
             throw new RuntimeException("No user for " + userId.getValue());
         }
         return user;
+    }
+
+    @Override
+    public UserId byEmailAndPassword(EmailAddress email, String password) {
+        for (Map.Entry<UserId, User> user : data.entrySet()) {
+            if(user.getValue().getEmailAddress() == email && user.getValue().getPassword().equals(password)){
+                return user.getKey();
+            }
+        }
+        throw new IllegalArgumentException("These identifiant does not exist!");
     }
 
     @Override

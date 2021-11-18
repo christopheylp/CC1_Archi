@@ -8,6 +8,7 @@ public final class User {
     private final String lastname;
     private final String firstname;
     private String password;
+    private BankCard bankCard;
 
     public User(UserId id, EmailAddress emailAddress, String lastname, String firstname, String password) {
         this.id = Objects.requireNonNull(id);
@@ -27,6 +28,14 @@ public final class User {
 
     public void changePassword(String newPassword) {
         this.password = Objects.requireNonNull(newPassword);
+    }
+
+    public EmailAddress getEmailAddress() {
+        return emailAddress;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     @Override

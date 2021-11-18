@@ -8,6 +8,8 @@ public interface UserRepository {
 
     User byId(UserId userId);
 
+    UserId byEmailAndPassword(EmailAddress email, String password);
+
     UserId nextIdentity();
 
     Map<UserId, User> findAll();
