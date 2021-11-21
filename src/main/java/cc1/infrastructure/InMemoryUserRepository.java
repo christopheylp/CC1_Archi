@@ -36,7 +36,7 @@ public final class InMemoryUserRepository implements UserRepository {
                 return user.getKey();
             }
         }
-        throw new IllegalArgumentException("These identifiant does not exist!");
+        throw new RuntimeException("These identifies are incorrect!");
     }
 
     @Override

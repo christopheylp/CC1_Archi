@@ -1,10 +1,13 @@
 package cc1.domain.user;
 
+import java.util.regex.Pattern;
+
 public final class EmailAddress {
     private final String email;
 
     public EmailAddress(String email) {
-        if (email.matches("^[\\\\w!#$%&’*+/=?`{|}~^-]+(?:\\\\.[\\\\w!#$%&’*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\\\.)+[a-zA-Z]{2,6}$")) {
+        Pattern pattern = Pattern.compile("^(.+)@(\\S+)$");
+        if (!pattern.matcher(email).matches()) {
             throw new RuntimeException("Email Address format not valid !");
         }
         this.email = email;
