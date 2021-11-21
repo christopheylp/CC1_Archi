@@ -1,6 +1,5 @@
 package cc1.infrastructure;
 
-import cc1.domain.contractuor.ContractorRepository;
 import cc1.domain.payment.PaymentRepository;
 import cc1.domain.user.UserId;
 

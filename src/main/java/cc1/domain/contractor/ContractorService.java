@@ -1,4 +1,4 @@
-package cc1.domain.contractuor;
+package cc1.domain.contractor;
 
 import cc1.domain.payment.PaymentService;
 import cc1.domain.user.UserId;

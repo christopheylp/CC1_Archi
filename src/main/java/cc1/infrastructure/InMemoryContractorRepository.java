@@ -1,6 +1,6 @@
 package cc1.infrastructure;
 
-import cc1.domain.contractuor.ContractorRepository;
+import cc1.domain.contractor.ContractorRepository;
 import cc1.domain.user.UserId;
 
 import java.util.ArrayList;

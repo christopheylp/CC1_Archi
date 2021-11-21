@@ -2,8 +2,8 @@ package cc1;
 
 import cc1.domain.connection.UserConnectionRepository;
 import cc1.domain.connection.UserConnectionService;
-import cc1.domain.contractuor.ContractorRepository;
-import cc1.domain.contractuor.ContractorService;
+import cc1.domain.contractor.ContractorRepository;
+import cc1.domain.contractor.ContractorService;
 import cc1.domain.payment.PaymentRepository;
 import cc1.domain.payment.PaymentService;
 import cc1.domain.user.*;
